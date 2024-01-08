@@ -9,8 +9,7 @@ return {
         dependencies = {
             'nvim-lua/plenary.nvim'
         },
-        config = function()
-            Telescope = require('telescope.builtin')
+        config = function() 
             require('telescope').load_extension('fzf')
         end
     },

@@ -1,5 +1,8 @@
 return {
     {
+        'github/copilot.vim'
+    },
+    {
         'L3MON4D3/LuaSnip',
         dependencies = {
             'saadparwaiz1/cmp_luasnip',
@@ -30,32 +33,33 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                    ['<ESC>'] = cmp.mapping.abort(),
                     ['<CR>'] = cmp.mapping.confirm({ select = true })
                 }),
                 sources = cmp.config.sources({
-                    { name = 'nvim_lsp' },
-                    { name = 'vsnip' },
-                    { name = 'path' },
-                    { name = 'buffer' }
-                },
-                {
-                    { name = 'buffer' }
-                })
+                        { name = 'nvim_lsp' },
+                        { name = 'luasnip' },
+                        { name = 'path' },
+                        { name = 'buffer' }
+                    },
+                    {
+                        { name = 'buffer' }
+                    })
             })
 
             cmp.setup.cmdline(':', {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = cmp.config.sources({
-                    { name = 'path' }
-                },
-                {
+                        { name = 'path' }
+                    },
                     {
-                        name = 'cmdline',
-                        option = {
-                            ignore_cmds = { 'Man', '!' }
+                        {
+                            name = 'cmdline',
+                            option = {
+                                ignore_cmds = { 'Man', '!' }
+                            }
                         }
-                    }
-                })
+                    })
             })
 
             cmp.setup.cmdline('/', {
