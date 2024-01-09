@@ -21,10 +21,6 @@ return {
             ensure_installed = {
                 'lua_ls',
                 'jedi_language_server',
-                'black',
-                'isort',
-                'flake8',
-                'prettier',
                 'tsserver',
                 'dockerls',
                 'solidity_ls_nomicfoundation'
