@@ -20,7 +20,7 @@ return {
         opts = {
             ensure_installed = {
                 'lua_ls',
-                'jedi_language_server',
+                'pyright',
                 'tsserver',
                 'dockerls',
                 'solidity_ls_nomicfoundation'
@@ -82,7 +82,7 @@ return {
                     null_ls.builtins.formatting.trim_newlines,
                     null_ls.builtins.formatting.trim_whitespace,
                     null_ls.builtins.formatting.prettier,
-                    null_ls.builtins.diagnostics.flake8.with({
+                    null_ls.builtins.diagnostics.pylint.with({
                         extra_args = {
                             '--max-line-length=120'
                         }
