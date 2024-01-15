@@ -18,11 +18,5 @@ return {
         opts = {
             '*'
         }
-    },
-    {
-        'VonHeikemen/searchbox.nvim',
-        dependencies = {
-            'MunifTanjim/nui.nvim'
-        }
     }
 }

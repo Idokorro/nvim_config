@@ -1,17 +1,30 @@
 -- Global
 vim.keymap.set('n', '<Home>', '_')
 vim.keymap.set('i', '<Home>', '<ESC>_i')
+
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
+
+vim.keymap.set('i', '<M-h>', '<Left>')
+vim.keymap.set('i', '<M-j>', '<Down>')
+vim.keymap.set('i', '<M-k>', '<Up>')
+vim.keymap.set('i', '<M-l>', '<Right>')
+
 vim.keymap.set('n', '<C-s>', ':wall<CR>')
+
+-- Inc rename
+vim.keymap.set('n', '<leader>rn', function()
+    return ':IncRename ' .. vim.fn.expand('<cword>')
+end, { expr = true })
 
 -- Telescope
 vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
 vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, {})
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, {})
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {})
+vim.keymap.set('n', '<leader>fn', '<CMD>Telescope notify<CR>')
 
 -- Neotree
 vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle<CR>')
@@ -32,11 +45,7 @@ vim.keymap.set('n', '<leader>dr', require('dap').continue, {})
 vim.keymap.set('n', '<C-o>', require('dap').step_over, {})
 vim.keymap.set('n', '<C-i>', require('dap').step_into, {})
 vim.keymap.set('n', '<C-p>', require('dap').terminate, {})
-vim.keymap.set('n', '<M-i>', '<cmd>:lua require("dapui").eval()<CR>')
-
--- Search / replace box
-vim.keymap.set('n', '/', ':SearchBoxMatchAll<CR>')
-vim.keymap.set('n', '<C-r>', ':SearchBoxReplace<CR>')
+vim.keymap.set('n', '<M-i>', '<cmd>lua require("dapui").eval()<CR>')
 
 -- Comment
 -- line = 'gcc'
