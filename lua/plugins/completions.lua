@@ -3,6 +3,9 @@ return {
         'github/copilot.vim'
     },
     {
+        'ofseed/copilot-status.nvim'
+    },
+    {
         'L3MON4D3/LuaSnip',
         dependencies = {
             'saadparwaiz1/cmp_luasnip',
