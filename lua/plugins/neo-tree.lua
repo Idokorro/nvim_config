@@ -10,8 +10,11 @@ return {
         close_if_last_window = true,
         popup_border_style = 'rounded',
         window = {
-            position = 'left',
-            width = 30,
+            position = 'float',
+            popup = {
+                size = { height = '35', width = '50' },
+                position = '50%'
+            },
             mappings = {
                 ['P'] = { 'toggle_preview', config = { use_float = true, use_image_nvim = false } },
                 ['<2-LeftMouse>'] = 'open'

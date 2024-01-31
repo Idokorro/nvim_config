@@ -75,7 +75,7 @@ return {
                 sources = {
                     null_ls.builtins.formatting.black.with({
                         extra_args = {
-                            '--line-length=120'
+                            '--line-length=140'
                         }
                     }),
                     null_ls.builtins.formatting.isort,
@@ -84,7 +84,7 @@ return {
                     null_ls.builtins.formatting.prettier,
                     null_ls.builtins.diagnostics.pylint.with({
                         extra_args = {
-                            '--max-line-length=120'
+                            '--max-line-length=140'
                         }
                     }),
                     null_ls.builtins.diagnostics.eslint,

@@ -7,10 +7,10 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
-vim.keymap.set('i', '<M-h>', '<Left>')
-vim.keymap.set('i', '<M-j>', '<Down>')
-vim.keymap.set('i', '<M-k>', '<Up>')
-vim.keymap.set('i', '<M-l>', '<Right>')
+vim.keymap.set('i', '<C-h>', '<Left>')
+vim.keymap.set('i', '<C-j>', '<Down>')
+vim.keymap.set('i', '<C-k>', '<Up>')
+vim.keymap.set('i', '<C-l>', '<Right>')
 
 vim.keymap.set('n', '<C-s>', ':wall<CR>')
 
@@ -25,6 +25,7 @@ vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, {})
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, {})
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {})
 vim.keymap.set('n', '<leader>fn', '<CMD>Telescope notify<CR>')
+vim.keymap.set('n', '<leader>u', '<CMD>Telescope undo<CR>')
 
 -- Neotree
 vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle<CR>')
