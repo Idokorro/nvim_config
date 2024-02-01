@@ -48,6 +48,16 @@ vim.keymap.set('n', '<C-i>', require('dap').step_into, {})
 vim.keymap.set('n', '<C-p>', require('dap').terminate, {})
 vim.keymap.set('n', '<M-i>', '<cmd>lua require("dapui").eval()<CR>')
 
+-- Trouble
+vim.keymap.set('n', '<leader>tt', '<cmd>TroubleToggle<cr>', {})
+vim.keymap.set('n', '<leader>tw', '<cmd>TroubleToggle workspace_diagnostics<cr>', {})
+vim.keymap.set('n', '<leader>td', '<cmd>TroubleToggle document_diagnostics<cr>', {})
+vim.keymap.set('n', '<leader>tq', '<cmd>TroubleToggle quickfix<cr>', {})
+
+-- Gitsigns
+vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns preview_hunk<cr>', {})
+vim.keymap.set('n', '<leader>gr', '<cmd>Gitsigns reset_hunk<cr>', {})
+
 -- Comment
 -- line = 'gcc'
 -- block = 'gbc'
