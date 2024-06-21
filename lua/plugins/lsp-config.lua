@@ -79,16 +79,11 @@ return {
                         }
                     }),
                     null_ls.builtins.formatting.isort,
-                    null_ls.builtins.formatting.trim_newlines,
-                    null_ls.builtins.formatting.trim_whitespace,
-                    null_ls.builtins.formatting.prettier,
                     null_ls.builtins.diagnostics.pylint.with({
                         extra_args = {
                             '--max-line-length=140'
                         }
-                    }),
-                    null_ls.builtins.diagnostics.eslint,
-                    null_ls.builtins.code_actions.eslint
+                    })
                 }
             })
         end
