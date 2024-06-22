@@ -73,6 +73,9 @@ return {
                     end
                 end,
                 sources = {
+                    null_ls.builtins.formatting.isort,
+                    null_ls.builtins.formatting.trim_newlines,
+                    null_ls.builtins.formatting.trim_whitespace,
                     null_ls.builtins.formatting.black.with({
                         extra_args = {
                             '--line-length=140'
