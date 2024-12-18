@@ -77,7 +77,6 @@ return {
                             '--line-length=140'
                         }
                     }),
-                    null_ls.builtins.formatting.isort,
                     null_ls.builtins.diagnostics.pylint.with({
                         extra_args = {
                             '--max-line-length=140'
