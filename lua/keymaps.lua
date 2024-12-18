@@ -14,6 +14,12 @@ vim.keymap.set('i', '<C-l>', '<Right>')
 
 vim.keymap.set('n', '<C-s>', ':wall<CR>')
 
+-- tmux-navigator
+vim.keymap.set('n', '<C-h>', '<CMD>TmuxNavigateLeft<CR>')
+vim.keymap.set('n', '<C-j>', '<CMD>TmuxNavigateDown<CR>')
+vim.keymap.set('n', '<C-k>', '<CMD>TmuxNavigateUp<CR>')
+vim.keymap.set('n', '<C-l>', '<CMD>TmuxNavigateRight<CR>')
+
 -- Inc rename
 vim.keymap.set('n', '<leader>rn', function()
     return ':IncRename ' .. vim.fn.expand('<cword>')

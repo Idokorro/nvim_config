@@ -20,10 +20,7 @@ return {
         opts = {
             ensure_installed = {
                 'lua_ls',
-                'pyright',
-                'tsserver',
-                'dockerls',
-                'solidity_ls_nomicfoundation'
+                'pyright'
             }
         }
     },
