@@ -20,6 +20,7 @@ return {
         opts = {
             ensure_installed = {
                 'lua_ls',
+                'dockerls',
                 'pyright'
             }
         }
