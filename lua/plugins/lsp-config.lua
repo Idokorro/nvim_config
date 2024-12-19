@@ -76,11 +76,6 @@ return {
                         extra_args = {
                             '--line-length=140'
                         }
-                    }),
-                    null_ls.builtins.diagnostics.pylint.with({
-                        extra_args = {
-                            '--max-line-length=140'
-                        }
                     })
                 }
             })
